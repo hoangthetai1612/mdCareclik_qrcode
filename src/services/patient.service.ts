@@ -5,13 +5,13 @@ import { map } from "rxjs/operators"
 
 
 @Injectable({providedIn: 'root'})
-export class InfoService{
+export class PatientService{
     constructor(
         private http: HttpClient
     ) {
 
     }
     getInfo(id): Observable<any> {
-        return this.http.get(``).pipe(map((res: any)=> res))
+        return this.http.get(`api/getInfoProfile/${id}`).pipe(map((res: any)=> res))
     }
 }

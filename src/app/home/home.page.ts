@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { InfoService } from 'src/services/info.service';
+import { Observable } from 'rxjs';
+import { PatientService } from 'src/services/patient.service';
+import { Patient } from '../models/patient.model';
 
 @Component({
   selector: 'app-home',
@@ -8,24 +10,16 @@ import { InfoService } from 'src/services/info.service';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  model = {
-    status: true,
-    fullName: 'Hoa Van Nguyen',
-    dob: '06/20/1961',
-    firstDose: '12/17/2020',
-    secondDose: '01/07/2021',
-    manufacture: 'Pfizer-BioNTech'
-  }
   id: any;
-  model$: any;
+  model$: Observable<Patient>;
   constructor(
-    private infoService: InfoService,
+    private patientService: PatientService,
     private activeRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.id = this.activeRoute.snapshot.params.id;
-    this.model$ = this.infoService.getInfo(this.id);
+    this.model$ = this.patientService.getInfo('PT186');
   }
 
 
