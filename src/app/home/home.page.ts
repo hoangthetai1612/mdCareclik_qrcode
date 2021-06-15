@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
   model = {
-    status: false,
+    status: true,
     fullName: 'Hoa Van Nguyen',
     dob: '06/20/1961',
     firstDose: '12/17/2020',
