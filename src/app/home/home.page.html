@@ -11,8 +11,8 @@
           </ion-avatar>
         </ion-col>
         <ion-col size="9">
-          <div class="name">{{model?.fullName}}</div>
-          <div class="verified" *ngIf="model?.status; else notVeri">Verified
+          <div class="name">{{model.fullName}}</div>
+          <div class="verified" *ngIf="model.status; else notVeri">Verified
             <img src="assets/icon/verified-icon.svg" alt="">
           </div>
           <ng-template #notVeri> 
