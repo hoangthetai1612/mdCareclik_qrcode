@@ -1,0 +1,7 @@
+{
+  "name": "mdCareclik_qrcode",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
