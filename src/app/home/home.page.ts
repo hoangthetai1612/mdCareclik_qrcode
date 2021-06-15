@@ -19,8 +19,6 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.id = this.activeRoute.snapshot.params.id;
-    this.model$ = this.patientService.getInfo('PT186');
+    this.model$ = this.patientService.getInfo(this.id);
   }
-
-
 }
