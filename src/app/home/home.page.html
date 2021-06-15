@@ -11,37 +11,37 @@
           </ion-avatar>
         </ion-col>
         <ion-col size="9">
-          <div class="name">Hoa Van Nguyen</div>
-          <div class="verified">Verified
+          <div class="name">{{model?.fullName}}</div>
+          <div class="verified" *ngIf="model?.status; else notVeri">Verified
             <img src="assets/icon/verified-icon.svg" alt="">
           </div>
+          <ng-template #notVeri> 
+            <div class="notVeri">Not yet verified
+            </div>
+          </ng-template>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="12">
+        <ion-col size="12" *ngIf="model">
           <ion-item>
-            <ion-label position="floating">Full name</ion-label>
-            <ion-input></ion-input>
+            <ion-label position="stacked">Full name</ion-label>
+            <p class="text-item">{{model.fullName}}</p>
           </ion-item>
           <ion-item>
-            <ion-label position="floating">Date of birth</ion-label>
-            <ion-input></ion-input>
+            <ion-label position="stacked">Date of birth</ion-label>
+            <p class="text-item">{{model.dob}}</p>
           </ion-item>
           <ion-item>
-            <ion-label position="floating">1st dose</ion-label>
-            <ion-input></ion-input>
+            <ion-label position="stacked">1st dose</ion-label>
+            <p class="text-item">{{model.firstDose}}</p>
           </ion-item>
           <ion-item>
-            <ion-label position="floating">2nd dose</ion-label>
-            <ion-input></ion-input>
+            <ion-label position="stacked">2nd dose</ion-label>
+            <p class="text-item">{{model.secondDose}}</p>
           </ion-item>
           <ion-item>
-            <ion-label position="floating">Manufacture</ion-label>
-            <ion-input></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label position="floating">Full name</ion-label>
-            <ion-input></ion-input>
+            <ion-label position="stacked">Manufacture</ion-label>
+            <p class="text-item">{{model.manufacture}}</p>
           </ion-item>
         </ion-col>
       </ion-row>

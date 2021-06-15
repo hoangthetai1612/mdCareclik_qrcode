@@ -29,15 +29,26 @@
             margin-left: 5px;
         }
     }
+    .notVeri{
+        width: 153px;
+        padding: 4px 0;
+        border-radius: 16px;
+        text-align: center;
+        font-size: 12px;
+        color: #000000;
+        background: #FBC150;
+    }
     ion-item{
         --padding-start: 0;
         --inner-padding-end: 0;
+        --highlight-height: 2px
     }
     ion-label{
         color: rgba($color: #272727, $alpha: 0.5);
     }
-    ion-input{
+    .text-item{
         color: #272727;
         font-size: 14px;
+        margin: 8px 0;
     }
 }
