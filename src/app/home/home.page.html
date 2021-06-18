@@ -27,13 +27,13 @@
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Date of birth</ion-label>
-            <p class="text-item">{{model.DOB | date:'dd/MM/yyyy'}}</p>
+            <p class="text-item">{{model.DOB | date:'MM/dd/yyyy'}}</p>
           </ion-item>
           <ion-item *ngFor="let item of model.ListDose">
             <ion-label position="stacked"
               >{{item.DoseTime | numerical}} dose</ion-label
             >
-            <p class="text-item">{{item.DoseDate | date: 'dd/MM/yyyy'}}</p>
+            <p class="text-item">{{item.DoseDate | date: 'MM/dd/yyyy'}}</p>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Manufacture</ion-label>
