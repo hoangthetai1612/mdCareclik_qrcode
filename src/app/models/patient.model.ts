@@ -6,4 +6,11 @@ export interface Patient {
   Phone: string;
   Email: string;
   Verified: boolean;
+  Manufacture: string;
+  ReceivedLocation: string;
+  ListDose: [Dose]
+}
+export interface Dose{
+  DoseTime: number;
+  DoseDate: string;
 }

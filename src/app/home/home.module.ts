@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
+import { NumericalPipe } from '../utils/numericalOrder.pipe';
+import { SpitStringPipe } from '../utils/splitString.pipe';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, NumericalPipe, SpitStringPipe]
 })
 export class HomePageModule {}

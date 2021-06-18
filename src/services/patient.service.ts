@@ -12,6 +12,6 @@ export class PatientService{
 
     }
     getInfo(id): Observable<any> {
-        return this.http.get(`api/getInfoProfile/${id}`).pipe(map((res: any)=> res))
+        return this.http.get(`api/vaccinePatient/${id}`).pipe(map((res: any)=> res))
     }
 }

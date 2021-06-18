@@ -7,7 +7,8 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { APIInterceptor } from '../utils/interceptor/api.interceptor';
+import { APIInterceptor } from './interceptor/api.interceptor';
+import { NumericalPipe } from './utils/numericalOrder.pipe';
 
 @NgModule({
   declarations: [AppComponent],
